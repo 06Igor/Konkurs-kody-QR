@@ -41,13 +41,8 @@
         function displayImage() {
             var password = document.getElementById("password").value;
             var imageContainer = document.getElementById("imageContainer");
-            
-            // Tutaj wpisz ścieżkę do swojego pliku JPG
             var imagePath = "foto/qrcode_puzzle.png";
-
-            // Sprawdzanie, czy hasło jest poprawne (to jest jedynie cel demonstracyjny)
             if (password === "KOMPUTER") {
-                // Wyświetlanie obrazu
                 imageContainer.innerHTML = '<img src="' + imagePath + '" alt="Kod QR">';
             } else {
                 imageContainer.innerHTML = '<p>Nieprawidłowe hasło.</p>';
