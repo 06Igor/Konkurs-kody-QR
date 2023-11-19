@@ -26,85 +26,9 @@
 </head>
 <body>
 
-    <h1>KrzyżówkaR</h1>
-
-      <table id="crossword">
-        <tr>
-            <td id="cell1" onclick="fillCell(this)"></td>
-            <td id="cell2" onclick="fillCell(this)"></td>
-            <td id="cell3" onclick="fillCell(this)"></td>
-            <td id="cell4" onclick="fillCell(this)"></td>
-            <td id="cell5" onclick="fillCell(this)"></td>
-        </tr>
-        <tr>
-            <td id="cell6" onclick="fillCell(this)"></td>
-            <td id="cell7" onclick="fillCell(this)"></td>
-            <td id="cell8" onclick="fillCell(this)"></td>
-            <td id="cell9" onclick="fillCell(this)"></td>
-            <td id="cell10" onclick="fillCell(this)"></td>
-        </tr>
-        <tr>
-            <td id="cell11" onclick="fillCell(this)"></td>
-            <td id="cell12" onclick="fillCell(this)"></td>
-            <td id="cell13" onclick="fillCell(this)"></td>
-            <td id="cell14" onclick="fillCell(this)"></td>
-            <td id="cell15" onclick="fillCell(this)"></td>
-        </tr>
-        <tr>
-            <td id="cell16" onclick="fillCell(this)"></td>
-            <td id="cell17" onclick="fillCell(this)"></td>
-            <td id="cell18" onclick="fillCell(this)"></td>
-            <td id="cell19" onclick="fillCell(this)"></td>
-            <td id="cell20" onclick="fillCell(this)"></td>
-        </tr>
-        <tr>
-            <td id="cell21" onclick="fillCell(this)"></td>
-            <td id="cell22" onclick="fillCell(this)"></td>
-            <td id="cell23" onclick="fillCell(this)"></td>
-            <td id="cell24" onclick="fillCell(this)"></td>
-            <td id="cell25" onclick="fillCell(this)"></td>
-        </tr>
-    </table>
-
-    <script>
-        function fillCell(cell) {
-            var inputValue = prompt("Wprowadź literę:");
-            if (inputValue !== null) {
-                cell.innerHTML = inputValue.toUpperCase();
-            }
-        }
-
-        // Wypełnij krzyżówkę odpowiednimi literami
-        document.getElementById("cell1").innerHTML = "P";
-        document.getElementById("cell2").innerHTML = "R";
-        document.getElementById("cell3").innerHTML = "O";
-        document.getElementById("cell4").innerHTML = "C";
-        document.getElementById("cell5").innerHTML = "E";
-
-        document.getElementById("cell6").innerHTML = "M";
-        document.getElementById("cell11").innerHTML = "Y";
-        document.getElementById("cell16").innerHTML = "S";
-        document.getElementById("cell21").innerHTML = "Z";
-
-        document.getElementById("cell7").innerHTML = "P";
-        document.getElementById("cell8").innerHTML = "Ł";
-        document.getElementById("cell9").innerHTML = "Y";
-        document.getElementById("cell10").innerHTML = "T";
-        document.getElementById("cell12").innerHTML = "A";
-
-        document.getElementById("cell13").innerHTML = "G";
-        document.getElementById("cell14").innerHTML = "Ł";
-        document.getElementById("cell15").innerHTML = "Ó";
-        document.getElementById("cell17").innerHTML = "W";
-        document.getElementById("cell18").innerHTML = "N";
-
-        document.getElementById("cell19").innerHTML = "R";
-        document.getElementById("cell20").innerHTML = "O";
-        document.getElementById("cell22").innerHTML = "M";
-        document.getElementById("cell23").innerHTML = "K";
-        document.getElementById("cell24").innerHTML = "L";
-        document.getElementById("cell25").innerHTML = "A";
-    </script>
+    <h1>Kod do krzyżówki</h1>
+   <img src="foto/qrcode_puzzel.org.png" alt="Kod QR">';
+     
     <form onsubmit="displayImage(); return false;">
         <label for="password">Wprowadź hasło z krzyżówki:</label>
         <input type="password" id="password" required>
@@ -119,7 +43,7 @@
             var imageContainer = document.getElementById("imageContainer");
             
             // Tutaj wpisz ścieżkę do swojego pliku JPG
-            var imagePath = "foto/Zimorodek4.jpg";
+            var imagePath = "foto/qrcode_puzzle.png";
 
             // Sprawdzanie, czy hasło jest poprawne (to jest jedynie cel demonstracyjny)
             if (password === "TwojeHaslo") {
