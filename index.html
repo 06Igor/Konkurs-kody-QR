@@ -4,11 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Konkurs z kodami QR</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px auto;
+        }
+
+        td {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            border: 1px solid #000;
+            cursor: pointer;
+        }
+
+        .clue {
+            margin: 10px;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Konkurs z kodami QR</h1>
-    
+    <h1>KrzyżówkaR</h1>
+
+    <div class="clue" id="clue1">Poziomo: 1. Pierwsza litera alfabetu</div>
+    <div class="clue" id="clue2">Pionowo: 1. Kraj w Europie</div>
+
+    <table id="crossword">
+        <tr>
+            <td id="cell1" onclick="fillCell(this, 'clue1')"> </td>
+            <td id="cell2" onclick="fillCell(this, 'clue1')"> </td>
+            <td id="cell3" onclick="fillCell(this, 'clue1')"> </td>
+            <td id="cell4" onclick="fillCell(this, 'clue1')"> </td>
+            <td id="cell5" onclick="fillCell(this, 'clue1')"> </td>
+        </tr>
+        <tr>
+            <td id="cell6" onclick="fillCell(this, 'clue2')"> </td>
+            <td id="cell7" onclick="fillCell(this, 'clue2')"> </td>
+            <td id="cell8" onclick="fillCell(this, 'clue2')"> </td>
+            <td id="cell9" onclick="fillCell(this, 'clue2')"> </td>
+            <td id="cell10" onclick="fillCell(this, 'clue2')"> </td>
+        </tr>
+    </table>
+
+    <script>
+        function fillCell(cell, clueId) {
+            var inputValue = prompt("Wprowadź literę:");
+            if (inputValue !== null) {
+                cell.innerHTML = inputValue.toUpperCase();
+                checkClue(clueId);
+            }
+        }
+
+        function checkClue(clueId) {
+            var cells = document.querySelectorAll('[id^="cell"]');
+            var filledCells = Array.from(cells).filter(cell => cell.innerHTML !== ' ');
+
+            var allFilled = filledCells.every(cell => cell.innerHTML !== ' ');
+
+            if (allFilled) {
+                alert("Wszystkie komórki zostały wypełnione!");
+            }
+        }
+    </script>
     <form onsubmit="displayImage(); return false;">
         <label for="password">Wprowadź hasło z krzyżówki:</label>
         <input type="password" id="password" required>
