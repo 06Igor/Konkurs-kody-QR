@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strona z obrazem</title>
+    <title>Konkurs z kodami QR</title>
 </head>
 <body>
 
-    <h1>Strona z obrazem</h1>
+    <h1>Konkurs z kodami QR</h1>
     
     <form onsubmit="displayImage(); return false;">
-        <label for="password">Wprowadź hasło:</label>
+        <label for="password">Wprowadź hasło z krzyżówki:</label>
         <input type="password" id="password" required>
-        <button type="submit">Wyświetl obraz</button>
+        <button type="submit">Wyświetl kod QR</button>
     </form>
 
     <div id="imageContainer"></div>
@@ -28,7 +28,7 @@
             // Sprawdzanie, czy hasło jest poprawne (to jest jedynie cel demonstracyjny)
             if (password === "TwojeHaslo") {
                 // Wyświetlanie obrazu
-                imageContainer.innerHTML = '<img src="' + imagePath + '" alt="Obraz">';
+                imageContainer.innerHTML = '<img src="' + imagePath + '" alt="Kod QR">';
             } else {
                 imageContainer.innerHTML = '<p>Nieprawidłowe hasło.</p>';
             }
